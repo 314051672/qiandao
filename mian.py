@@ -5,7 +5,7 @@ import tornado.web
 from DING import *
 import sys
 import datetime,time
-
+sys.path.append("")
 class TimeHandler(tornado.web.RequestHandler):
 
     def get(self):
