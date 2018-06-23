@@ -3,7 +3,7 @@ import datetime
 def qian():
    import requests
    
-   li=[eval(i) for i in open('F:\qiandao\qiandao\qian.config','r+')]
+   li=[eval(i) for i in open('qian.config','r+')]
    for i in li:
        try:
           print(i)
@@ -14,13 +14,13 @@ def qian():
           print(b.json())
           c=str(datetime.datetime.now())
           a={'time':c,'data':b.json()['message']}
-          f=open('F:\qiandao\qiandao\qian.log','a+')
+          f=open('qian.log','a+')
           f.write('\n')
           f.write(str(a))
        except:
           print('错误')
           print(b.text)
-          f=open('F:\qiandao\qiandao\qian.log','a+')
+          f=open('qian.log','a+')
           c=str(datetime.datetime.now())
           a={'time':c,'data':b.text}
           f.write('\n')
